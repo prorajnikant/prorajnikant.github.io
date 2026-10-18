@@ -5,18 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Not found · Harshit Kochar</title>
 <meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <style>
-@font-face{font-family:Fraunces;src:url(/fraunces-600.woff2) format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:Fraunces;src:url(/fraunces-700.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"IBM Plex Sans";src:url(/plex-400.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"IBM Plex Sans";src:url(/plex-600.woff2) format("woff2");font-weight:600 700;font-display:swap}
 :root{--bg:#f7f5f2;--ink:#1c1b19;--accent:#0b6e6b;--on-accent:#fff;--hover:#08504e;--c1:#d7ede8;--c2:#f7dfc6;--c-op:.5;--hero:radial-gradient(circle at top left,#f0efe9 0%,#f7f5f2 55%,#fdfcf9 100%)}
 @media(prefers-color-scheme:dark){:root{--bg:#171614;--ink:#ede9e3;--accent:#5cc2bc;--on-accent:#0f1a19;--hover:#7dd3ce;--c1:#16302e;--c2:#3a2c1e;--c-op:.4;--hero:radial-gradient(circle at top left,#1e1d1a 0%,#171614 55%,#1a1917 100%)}}
 *{box-sizing:border-box}
-body{margin:0;font:1rem/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg)}
+body{margin:0;font:1rem/1.6 "IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg)}
 .hero{position:relative;overflow:hidden;min-height:100vh;display:grid;place-content:center;justify-items:start;gap:24px;padding:36px 6vw;background:var(--hero)}
 .hero::before,.hero::after{content:"";position:absolute;border-radius:999px;opacity:var(--c-op);pointer-events:none}
 .hero::before{width:320px;height:320px;background:var(--c1);top:-120px;left:-80px}
 .hero::after{width:260px;height:260px;background:var(--c2);bottom:-140px;right:-90px}
 .hero>*{position:relative;z-index:1;margin:0}
-h1{font:600 clamp(2.6rem,5vw,3.8rem)/1.1 Fraunces,"Iowan Old Style",Georgia,serif}
+h1{font:700 clamp(2.6rem,5vw,3.8rem)/1.1 Fraunces,"Iowan Old Style",Georgia,serif}
 a{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:600;background:var(--accent);color:var(--on-accent);text-decoration:none}
 a:hover{background:var(--hover)}
 a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
