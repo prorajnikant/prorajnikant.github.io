@@ -5,7 +5,7 @@ Personal site for Harshit Kochar. Plain HTML and CSS: no build step, no JavaScri
 - `index.html`: the whole site (the CSS is inline)
 - `404.html`: the not-found page GitHub Pages serves
 - `favicon.svg`: the icon
-- `fraunces-600.woff2`: the heading font, hosted here so the page makes no outside requests. It is Fraunces SemiBold (latin subset), released under the SIL Open Font License.
+- `fraunces-700.woff2`, `plex-400.woff2`, `plex-600.woff2`: the fonts, the same ones the learnsec page uses (Fraunces Bold for headings, IBM Plex Sans for body text). They are hosted here so the page makes no outside requests. Both are latin subsets released under the SIL Open Font License.
 - `.nojekyll`: tells GitHub Pages to serve files as-is
 
 ## Preview locally
