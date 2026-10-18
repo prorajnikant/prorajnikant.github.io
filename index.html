@@ -36,17 +36,20 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .hero::after{width:260px;height:260px;background:var(--c2);bottom:-140px;right:-90px}
 .nav,.hero-content{position:relative;z-index:1;max-width:1100px;margin:0 auto}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:48px}
-.brand{font:700 1.1rem var(--serif)}
+.brand{font:700 clamp(1.5rem,2.6vw,2rem)/1.1 var(--serif);margin:0}
+.nav-end{display:flex;align-items:center;gap:12px}
+.icons{display:flex;gap:4px}
+.icons a{display:grid;place-items:center;width:40px;height:40px;border-radius:999px;color:var(--muted)}
+.icons a:hover{background:var(--soft);color:var(--accent)}
 .nav-links{display:flex;flex-wrap:wrap;gap:8px 24px;font-weight:600;color:var(--muted)}
 .nav-cta{font-weight:600;padding:10px 18px;border-radius:999px;background:var(--soft)}
 .hero-content{display:grid;gap:24px}
 .eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:.75rem;color:var(--muted);margin:0}
 h1,h2{font-family:var(--serif);font-weight:700;margin:0}
-h1{font-size:clamp(2.6rem,5vw,3.8rem);line-height:1.1}
 h2{font-size:clamp(1.9rem,3vw,2.4rem);line-height:1.15;margin-bottom:24px}
 h3{margin:0 0 8px;font-size:1.15rem;line-height:1.35}
 ul,dl,dd{margin:0;padding:0;list-style:none}
-.hero-sub{max-width:680px;font-size:1.1rem;color:var(--muted);margin:0}
+.hero-sub{max-width:820px;font-size:clamp(1.3rem,2.4vw,1.75rem);line-height:1.4;color:var(--ink);margin:0}
 .hero-actions{display:flex;flex-wrap:wrap;gap:16px}
 .btn{padding:12px 22px;border-radius:999px;font-weight:600;border:1px solid transparent;display:inline-flex;align-items:center}
 .btn.primary{background:var(--accent);color:var(--on-accent)}
@@ -104,16 +107,17 @@ ul,dl,dd{margin:0;padding:0;list-style:none}
 .socials{margin-top:24px;font-weight:600}
 .cta .btn{display:inline-block;background:var(--peach);color:#1c1b19;font-weight:600;padding:12px 22px;border-radius:999px;overflow-wrap:anywhere}
 .cta .btn:hover{color:#1c1b19;opacity:.9}
+.socials a{display:inline-flex;align-items:center;gap:8px}
 .socials a:hover{color:var(--peach)}
 .cta a:focus-visible{outline-color:var(--peach)}
 .footer{padding:40px 6vw 60px;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;color:var(--muted)}
 .footer p{margin:0}
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 @media(prefers-reduced-motion:no-preference){.section,.card,.level{animation:fadeUp .8s ease both}}
-@media(max-width:720px){.nav{flex-direction:column;align-items:flex-start}.hero{padding:32px 6vw 70px}.hero-actions{flex-direction:column;align-items:flex-start}.footer{flex-direction:column}}
+@media(max-width:720px){.nav{flex-direction:column;align-items:flex-start}.nav-end{flex-wrap:wrap}.hero{padding:32px 6vw 70px}.hero-actions{flex-direction:column;align-items:flex-start}.footer{flex-direction:column}}
 @media print{
 *{background:none!important;color:#000!important;box-shadow:none!important;animation:none!important}
-.hero::before,.hero::after,.nav-cta,.nav-links,.hero-actions,.skip,.footer a{display:none!important}
+.hero::before,.hero::after,.nav-cta,.nav-links,.icons,.hero-actions,.skip,.footer a{display:none!important}
 .section{padding:24px 0}.hero{padding:0;overflow:visible}
 a[href^=http]::after{content:" (" attr(href) ")"}
 .card,.level{break-inside:avoid}}
@@ -122,10 +126,9 @@ a[href^=http]::after{content:" (" attr(href) ")"}
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header id="top" class="hero">
-<nav class="nav" aria-label="Main"><span class="brand">Harshit Kochar</span><ul class="nav-links"><li><a href="#about">About</a></li><li><a href="#highlights">Highlights</a></li><li><a href="#experience">Experience</a></li><li><a href="#skills">Skills</a></li></ul><a class="nav-cta" href="#contact">Get in touch</a></nav>
+<div class="nav"><h1 class="brand">Harshit Kochar</h1><nav aria-label="Main"><ul class="nav-links"><li><a href="#about">About</a></li><li><a href="#highlights">Highlights</a></li><li><a href="#experience">Experience</a></li><li><a href="#skills">Skills</a></li></ul></nav><div class="nav-end"><div class="icons"><a href="https://www.linkedin.com/in/harshit-kochar" rel="noopener" aria-label="LinkedIn profile" title="LinkedIn profile"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V17M8 7.5v.01M12 17v-6.5M12 13.5a3 3 0 0 1 6 0V17"/></svg></a><a href="https://github.com/harshit-kochar" rel="noopener" aria-label="GitHub profile" title="GitHub profile"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 20v-3c-3 .6-4-1-4.5-2.5M15 20v-3.2c0-.8-.2-1.4-.6-1.8 2.6-.3 4.6-1.6 4.6-5.2 0-1.1-.4-2.1-1.1-2.9.2-.8.2-1.8-.2-2.9 0 0-1-.3-3.2 1.2a10 10 0 0 0-5 0C7.8 3.7 6.8 4 6.8 4c-.4 1.1-.4 2.1-.2 2.9-.7.8-1.1 1.8-1.1 2.9 0 3.6 2 4.9 4.6 5.2-.4.4-.6 1-.6 1.8V20"/></svg></a><a href="https://supply-chain-security.hashnode.dev/supply-chain-security-lab" rel="noopener" aria-label="Blog: Supply chain security lab" title="Blog: Supply chain security lab"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16v4z"/><path d="m13.5 6.5 4 4"/></svg></a><a href="mailto:harshitkochar17@gmail.com" aria-label="Email Harshit" title="Email Harshit"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg></a></div><a class="nav-cta" href="#contact">Get in touch</a></div></div>
 <div class="hero-content">
 <p class="eyebrow">Security Engineer II · Postman · Bangalore, India</p>
-<h1>Harshit Kochar</h1>
 <p class="hero-sub">I make the secure way to ship software the easy way at Postman: hardening the npm supply chain, putting guardrails around AI coding agents, and running detection and incident response.</p>
 <div class="hero-actions"><a class="btn primary" href="mailto:harshitkochar17@gmail.com">Email me</a><a class="btn ghost" href="#experience">See experience</a></div>
 <dl class="hero-meta"><div><dt>Focus</dt><dd>Supply chain · AI agent security · Detection</dd></div><div><dt>Since</dt><dd>Postman, 2022</dd></div></dl>
@@ -175,7 +178,7 @@ a[href^=http]::after{content:" (" attr(href) ")"}
 <h2 id="contact">Contact</h2>
 <p>Email is the fastest way to reach me.</p>
 <a class="btn" href="mailto:harshitkochar17@gmail.com">harshitkochar17@gmail.com</a>
-<ul class="socials"><li><a href="https://www.linkedin.com/in/harshit-kochar" rel="noopener">LinkedIn</a></li><li><a href="https://supply-chain-security.hashnode.dev/supply-chain-security-lab" rel="noopener">Blog: Supply chain security lab</a></li><li><a href="https://github.com/harshit-kochar" rel="noopener">GitHub</a></li></ul>
+<ul class="socials"><li><a href="https://www.linkedin.com/in/harshit-kochar" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V17M8 7.5v.01M12 17v-6.5M12 13.5a3 3 0 0 1 6 0V17"/></svg>LinkedIn</a></li><li><a href="https://supply-chain-security.hashnode.dev/supply-chain-security-lab" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16v4z"/><path d="m13.5 6.5 4 4"/></svg>Blog: Supply chain security lab</a></li><li><a href="https://github.com/harshit-kochar" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 20v-3c-3 .6-4-1-4.5-2.5M15 20v-3.2c0-.8-.2-1.4-.6-1.8 2.6-.3 4.6-1.6 4.6-5.2 0-1.1-.4-2.1-1.1-2.9.2-.8.2-1.8-.2-2.9 0 0-1-.3-3.2 1.2a10 10 0 0 0-5 0C7.8 3.7 6.8 4 6.8 4c-.4 1.1-.4 2.1-.2 2.9-.7.8-1.1 1.8-1.1 2.9 0 3.6 2 4.9 4.6 5.2-.4.4-.6 1-.6 1.8V20"/></svg>GitHub</a></li></ul>
 </div></section>
 </main>
 <footer class="footer"><p>Harshit Kochar · Security Engineer</p><a href="#top">Back to top</a></footer>
