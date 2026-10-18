@@ -1,11 +1,11 @@
 # prorajnikant.github.io
 
-Personal site for Harshit Kochar. Plain HTML and CSS: no build step, no dependencies. The only JavaScript is one line that keeps the "years in security" figure current; without JS the page shows the value written into the HTML.
+Personal site for Harshit Kochar. Plain HTML and CSS: no build step, no dependencies. One inline line of JavaScript keeps the "years in security" figure current (without JS the page shows the value written into the HTML), and one script tag loads [GoatCounter](https://www.goatcounter.com) for privacy-friendly, cookie-free visit counts.
 
 - `index.html`: the whole site (the CSS is inline)
 - `404.html`: the not-found page GitHub Pages serves
 - `favicon.svg`: the icon
-- `fraunces-700.woff2`, `plex-400.woff2`, `plex-600.woff2`: the fonts, the same ones the learnsec page uses (Fraunces Bold for headings, IBM Plex Sans for body text). They are hosted here so the page makes no outside requests. Both are latin subsets released under the SIL Open Font License.
+- `fraunces-700.woff2`: Fraunces Bold for headings. `atkinson-hyperlegible.woff2`: Atkinson Hyperlegible Next (a variable font, weights 400-700) for body text, chosen for readability. They are hosted here so the page makes no outside requests. Both are latin subsets released under the SIL Open Font License.
 - `.nojekyll`: tells GitHub Pages to serve files as-is
 
 ## Preview locally
