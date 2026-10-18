@@ -4,9 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Harshit Kochar · Security Engineer</title>
-<meta name="theme-color" content="#FFF6E5">
-<meta name="theme-color" content="#141414" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f5f2">
+<meta name="theme-color" content="#171614" media="(prefers-color-scheme: dark)">
 <meta name="color-scheme" content="light dark">
+<link rel="preload" href="fraunces-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="description" content="Harshit Kochar is a security engineer at Postman in Bangalore, working on supply chain security, AI coding-agent security, detection engineering and incident response.">
 <link rel="canonical" href="https://prorajnikant.github.io/">
@@ -16,141 +17,152 @@
 <meta property="og:url" content="https://prorajnikant.github.io/">
 <meta name="twitter:card" content="summary">
 <style>
-:root{--ink:#111;--bg:#FFF6E5;--card:#fff;--shadow:#111;--y:#FFD84D;--p:#FF8FB1;--m:#7EE0C0;--l:#B9A8FF;--s:#7CC8FF;--sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;--pad:clamp(1.25rem,5vw,3rem);--r:.5rem}
-@media(prefers-color-scheme:dark){:root{--ink:#F4EFE6;--bg:#141414;--card:#1E1E1E;--shadow:#F4EFE6}}
+@font-face{font-family:Fraunces;src:url(fraunces-600.woff2) format("woff2");font-weight:600;font-display:swap}
+:root{--bg:#f7f5f2;--ink:#1c1b19;--muted:#5c5a55;--accent:#0b6e6b;--soft:#d8eee9;--card:#fff;--shadow:0 20px 45px rgba(20,16,8,.08);--r:18px;--peach:#f7dfc6;--on-accent:#fff;--accent-hover:#08504e;--line:#cfcac2;--cta:#1c1b19;--c1:#d7ede8;--c2:#f7dfc6;--c-op:.5;--hero:radial-gradient(circle at top left,#f0efe9 0%,#f7f5f2 55%,#fdfcf9 100%);--serif:Fraunces,"Iowan Old Style",Georgia,serif}
+@media(prefers-color-scheme:dark){:root{--bg:#171614;--ink:#ede9e3;--muted:#a8a39b;--accent:#5cc2bc;--soft:#16302e;--card:#211f1c;--shadow:0 20px 45px rgba(0,0,0,.35);--on-accent:#0f1a19;--accent-hover:#7dd3ce;--line:#4a463f;--cta:#262420;--c1:#16302e;--c2:#3a2c1e;--c-op:.4;--hero:radial-gradient(circle at top left,#1e1d1a 0%,#171614 55%,#1a1917 100%)}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:1.0625rem/1.6 var(--sans);overflow-wrap:break-word;overflow-x:clip}
-a{color:inherit;text-decoration:underline 3px var(--a,var(--y));text-underline-offset:.2em}
-a:focus-visible{outline:3px dashed var(--ink);outline-offset:3px}
-.skip{position:absolute;left:var(--pad);top:-4rem;background:var(--y);color:#111;border:3px solid var(--ink);padding:.5rem 1rem;z-index:1}
+html{scroll-behavior:smooth}
+body{margin:0;font:1rem/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg);overflow-wrap:break-word}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.skip{position:absolute;left:6vw;top:-4rem;background:var(--card);padding:.5rem 1rem;border-radius:999px;z-index:2}
 .skip:focus{top:.5rem}
-.wrap{max-width:62rem;margin:0 auto;padding:0 var(--pad)}
-main{display:grid;gap:2.5rem;padding-bottom:2.5rem}
-footer{padding-bottom:3rem}
-header{padding:clamp(1.5rem,5vw,3rem) 0 2.5rem}
-.hero,section{border:3px solid var(--ink);border-radius:var(--r);box-shadow:6px 6px 0 var(--shadow)}
-.hero{background:var(--y);color:#111;padding:clamp(1.25rem,5vw,3rem)}
-.hero a{text-decoration-color:#111}
-h1{font-size:clamp(2.75rem,10vw,6.5rem);line-height:1;letter-spacing:-.04em;font-weight:900;margin:0}
-.role{font-size:1.25rem;font-weight:600;margin:1rem 0 0}
-ul{list-style:none;margin:0;padding:0}
-nav ul{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
-.bx{--o:4px;display:inline-block;background:#fff;color:#111;border:3px solid var(--ink);border-radius:var(--r);box-shadow:var(--o) var(--o) 0 var(--shadow);font-weight:800;text-decoration:none;padding:.35rem .9rem;transition:transform .1s,box-shadow .1s}
-.bx:hover,.bx:focus-visible{transform:translate(calc(var(--o)/2),calc(var(--o)/2));box-shadow:calc(var(--o)/2) calc(var(--o)/2) 0 var(--shadow)}
-section{background:var(--card);padding:clamp(1.25rem,4vw,2.25rem)}
-section:nth-of-type(5n+1){--a:var(--y)}section:nth-of-type(5n+2){--a:var(--p)}section:nth-of-type(5n+3){--a:var(--m)}section:nth-of-type(5n+4){--a:var(--l)}section:nth-of-type(5n){--a:var(--s)}
-section[aria-labelledby=contact]{--a:var(--p)}
-h2{display:inline-block;background:var(--a);color:#111;border:3px solid var(--ink);border-radius:var(--r);box-shadow:4px 4px 0 var(--shadow);font-size:1.5rem;line-height:1.2;font-weight:900;letter-spacing:-.02em;padding:.3rem .9rem;margin:0 0 1.5rem;transform:rotate(-1.5deg)}
-section:nth-of-type(even) h2{transform:rotate(1deg)}
-h3{font-size:1.25rem;font-weight:800;letter-spacing:-.01em;line-height:1.3;margin:0}
-p{margin:0 0 1em}
-p:last-child{margin-bottom:0}
-.chip{display:inline-block;border:3px solid var(--ink);border-radius:var(--r);background:var(--card);font:.8125rem/1.4 var(--mono);padding:.15rem .6rem;margin:.6rem 0 1rem}
-.list{padding-left:1.25rem;list-style:disc}
-.list li{margin-bottom:.6em}
-article{background:var(--bg);border:3px solid var(--ink);border-radius:var(--r);padding:1.25rem}
-article+article{margin-top:1.5rem}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.25rem}
-.grid li{border:3px solid var(--ink);border-radius:var(--r);box-shadow:4px 4px 0 var(--shadow);padding:1rem;color:#111}
-.grid li:nth-child(3n+1){background:var(--m)}.grid li:nth-child(3n+2){background:var(--l)}.grid li:nth-child(3n){background:var(--s)}
-.grid a{text-decoration-color:#111}
-dt{font-weight:800;margin-top:1.25rem}
-dt:first-child{margin-top:0}
-dd{margin:.5rem 0 0}
-dd ul{display:flex;flex-wrap:wrap;gap:.5rem}
-dd li{background:var(--a);color:#111;border:3px solid var(--ink);border-radius:var(--r);font-weight:600;padding:.1rem .7rem}
-.plain li{margin-bottom:.6em}
-time{font-family:var(--mono);font-size:.9em}
-.btns{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1.5rem}
-.btns span{display:block;font-weight:800;margin-bottom:.5rem}
-.btn{--o:6px;display:block;font-size:1.25rem;padding:.9rem 1.1rem;overflow-wrap:anywhere}
-.btns li:nth-child(1) .btn{background:var(--y)}.btns li:nth-child(2) .btn{background:var(--s)}.btns li:nth-child(3) .btn{background:var(--m)}
-@media(prefers-reduced-motion:reduce){.bx{transition:none}.bx:hover,.bx:focus-visible{transform:none}}
+.hero{position:relative;overflow:hidden;padding:36px 6vw 90px;background:var(--hero)}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:999px;opacity:var(--c-op);pointer-events:none}
+.hero::before{width:320px;height:320px;background:var(--c1);top:-120px;left:-80px}
+.hero::after{width:260px;height:260px;background:var(--c2);bottom:-140px;right:-90px}
+.nav,.hero-content{position:relative;z-index:1;max-width:1100px;margin:0 auto}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:48px}
+.brand{font:600 1.1rem var(--serif)}
+.nav-cta{font-weight:600;padding:10px 18px;border-radius:999px;background:var(--soft)}
+.hero-content{display:grid;gap:24px}
+.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:.75rem;color:var(--muted);margin:0}
+h1,h2{font-family:var(--serif);font-weight:600;margin:0}
+h1{font-size:clamp(2.6rem,5vw,3.8rem);line-height:1.1}
+h2{font-size:clamp(2rem,3vw,2.6rem);margin-bottom:20px}
+h3{margin:0 0 10px;font-size:1.15rem}
+ul,dl,dd{margin:0;padding:0;list-style:none}
+.hero-actions{display:flex;flex-wrap:wrap;gap:16px}
+.btn{padding:12px 22px;border-radius:999px;font-weight:600;border:1px solid transparent;display:inline-flex;align-items:center}
+.btn.primary{background:var(--accent);color:var(--on-accent)}
+.btn.primary:hover{background:var(--accent-hover);color:var(--on-accent)}
+.btn.ghost{border-color:var(--line)}
+.hero-meta{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));color:var(--muted);margin:0}
+.hero-meta dt{font-size:.85rem;text-transform:uppercase;letter-spacing:.12em}
+.hero-meta dd{color:var(--ink);font-weight:600}
+.sec-nav{display:flex;flex-wrap:wrap;gap:8px 24px;font-weight:600;color:var(--muted)}
+.section{padding:80px 6vw}
+.inner{max-width:1100px;margin:0 auto}
+.list{display:grid;gap:12px}
+.list li{padding-left:20px;position:relative}
+.list li::before{content:"•";position:absolute;left:0;color:var(--accent);font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card,.level{background:var(--card);border-radius:var(--r);padding:22px;box-shadow:var(--shadow)}
+.card p{margin:0}
+.level{padding:24px}
+.level+.level{margin-top:24px}
+.level-tag{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 8px}
+.card .level-tag{margin:12px 0 0}
+.text a{color:var(--accent);text-decoration:underline;text-underline-offset:.2em}
+.text a:hover{color:var(--accent-hover)}
+.skills dt{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:12px}
+.skills ul{display:flex;flex-wrap:wrap;gap:8px}
+.skills li{background:var(--soft);border-radius:999px;padding:2px 12px;font-size:.9rem}
+.cta{background:var(--cta);color:#fff;text-align:center}
+@media(prefers-color-scheme:dark){.cta{color:var(--ink)}}
+.cta h2{margin-bottom:28px}
+.cta ul{display:flex;flex-wrap:wrap;justify-content:center;gap:24px}
+.cta span{display:block;font-size:.85rem;text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px}
+.cta a{display:inline-block;background:var(--peach);color:#1c1b19;font-weight:600;padding:12px 22px;border-radius:999px;overflow-wrap:anywhere}
+.cta a:hover{color:#1c1b19;opacity:.85}
+.cta a:focus-visible{outline-color:var(--peach)}
+.footer{padding:40px 6vw 60px;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;color:var(--muted)}
+.footer p{margin:0}
+.footer a{font-weight:600;text-decoration:underline;text-underline-offset:.2em}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:no-preference){.section,.card,.level{animation:fadeUp .8s ease both}}
+@media(max-width:720px){.nav{flex-direction:column;align-items:flex-start}.hero{padding:32px 6vw 70px}.hero-actions{flex-direction:column;align-items:flex-start}.footer{flex-direction:column}}
 @media print{
-*{background:none!important;color:#000!important;box-shadow:none!important;transform:none!important;border-color:#000!important}
-nav,.skip{display:none}
-body{font-size:11pt}
+*{background:none!important;color:#000!important;box-shadow:none!important;animation:none!important}
+.hero::before,.hero::after,.nav-cta,.sec-nav,.hero-actions,.skip,.footer a{display:none!important}
+.section{padding:24px 0}.hero{padding:0;overflow:visible}
 a[href^=http]::after{content:" (" attr(href) ")"}
-article,.grid li{break-inside:avoid}}
+.card,.level{break-inside:avoid}}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="wrap"><div class="hero">
+<header id="top" class="hero">
+<div class="nav"><span class="brand">Harshit Kochar</span><a class="nav-cta" href="#contact">Get in touch</a></div>
+<div class="hero-content">
+<p class="eyebrow">Security Engineer II · Postman · Bangalore, India</p>
 <h1>Harshit Kochar</h1>
-<p class="role">Security Engineer II at Postman · Bangalore, India</p>
-<nav aria-label="Sections"><ul><li><a class="bx" href="#about">About</a></li><li><a class="bx" href="#highlights">Highlights</a></li><li><a class="bx" href="#experience">Experience</a></li><li><a class="bx" href="#skills">Skills</a></li><li><a class="bx" href="#contact">Contact</a></li></ul></nav>
-</div></header>
-<main id="main" class="wrap">
-<section aria-labelledby="about">
+<div class="hero-actions"><a class="btn primary" href="mailto:harshitkochar17@gmail.com">Email me</a><a class="btn ghost" href="#experience">See experience</a></div>
+<dl class="hero-meta"><div><dt>Focus</dt><dd>Supply chain · AI agent security · Detection</dd></div><div><dt>Since</dt><dd>Postman, 2022</dd></div></dl>
+<nav aria-label="Sections"><ul class="sec-nav"><li><a href="#about">About</a></li><li><a href="#highlights">Highlights</a></li><li><a href="#experience">Experience</a></li><li><a href="#skills">Skills</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+</div>
+</header>
+<main id="main">
+<section class="section" aria-labelledby="about"><div class="inner">
 <h2 id="about">About</h2>
-<div>
+<div class="text">
 <p>I’m a security engineer at Postman, where I’ve worked since January 2022. My work sits where developer tooling meets security: making the safe way to ship code the easy way, hardening the software supply chain, and putting guardrails around AI coding agents before they become a problem.</p>
 <p>Before Postman I was a security analyst at Mobitrail, testing applications for clients including ICICI Prudential Mutual Fund. I write about supply chain security on my blog and occasionally give talks on API and AI security.</p>
 </div>
-</section>
-<section aria-labelledby="highlights">
+</div></section>
+<section class="section" aria-labelledby="highlights"><div class="inner">
 <h2 id="highlights">Highlights</h2>
-<div>
 <ul class="grid">
-<li><strong>Incident commander for Shai-Hulud.</strong> Led Postman’s response to the Shai-Hulud 2.0 npm supply chain worm. <a href="https://blog.postman.com/engineering/root-cause-analysis-shai-halud-2-0/" rel="noopener">Read the root cause analysis</a>.</li>
-<li><strong>Hackathon winner.</strong> Won People’s Choice and the Exploratory Innovation award at the Postman hackathon for a Rust-based client-side secret scanner that detects 120+ secret patterns for Postman entities.</li>
-<li><strong>Talks.</strong> <a href="https://youtu.be/q4chiSPo4GA?t=380" rel="noopener">Automating API security</a>; <a href="https://www.youtube.com/watch?v=hXsnb7HxzhY" rel="noopener">Snyk’s AI Security Radar</a>.</li>
+<li class="card text"><strong>Incident commander for Shai-Hulud.</strong> Led Postman’s response to the Shai-Hulud 2.0 npm supply chain worm. <a href="https://blog.postman.com/engineering/root-cause-analysis-shai-halud-2-0/" rel="noopener">Read the root cause analysis</a>.</li>
+<li class="card text"><strong>Hackathon winner.</strong> Won People’s Choice and the Exploratory Innovation award at the Postman hackathon for a Rust-based client-side secret scanner that detects 120+ secret patterns for Postman entities.</li>
+<li class="card text"><strong>Talks.</strong> <a href="https://youtu.be/q4chiSPo4GA?t=380" rel="noopener">Automating API security</a>; <a href="https://www.youtube.com/watch?v=hXsnb7HxzhY" rel="noopener">Snyk’s AI Security Radar</a>.</li>
 </ul>
-</div>
-</section>
-<section aria-labelledby="experience">
+</div></section>
+<section class="section" aria-labelledby="experience"><div class="inner">
 <h2 id="experience">Experience</h2>
-<div>
-<article>
+<article class="level">
+<p class="level-tag"><time datetime="2023-04">Apr 2023</time> – present · Bangalore</p>
 <h3>Postman — Security Engineer II</h3>
-<p class="chip"><time datetime="2023-04">Apr 2023</time> – present · Bangalore</p>
 <ul class="list"><li>Moved all npm publishing to GitHub Actions with OIDC, removing every npm write token and manual publish.</li><li>Built a fleet-wide Claude skill that generates repo-specific secure coding standards, and rolled out a baseline CLAUDE.md to developer machines to rein in unreviewed “vibe-coding”.</li><li>Wrote Claude hooks that strip malicious CLAUDE.md files from untrusted repos, and a GitHub Enterprise-wide app that blocks AI accounts from approving pull requests.</li><li>Enforced a 72-hour minimum release age for npm packages, plus a custom proxy that applies the same rule to IDE extensions, across developer machines and CI/CD.</li><li>Shipped Jamf profiles for Cursor, Claude Code and Claude Desktop that enforce team logins and security settings, require permission before reading sensitive files, and disable project-level MCP servers.</li><li>Maintain Postman’s core security library, which enforces secure redirects, CORS, CSP and content-type validation across every production service.</li><li>Wrote high-fidelity detections in Scanner.dev (SIEM) for GitHub, Okta and anomalous Postman API key use.</li></ul>
 </article>
-<article>
+<article class="level">
+<p class="level-tag"><time datetime="2022-01">Jan 2022</time> – <time datetime="2023-04">Apr 2023</time> · Bangalore</p>
 <h3>Postman — Security Engineer</h3>
-<p class="chip"><time datetime="2022-01">Jan 2022</time> – <time datetime="2023-04">Apr 2023</time> · Bangalore</p>
 <ul class="list"><li>Pentested 120+ releases, 50+ of them major, across IAM, Billing, API Network, Search and other teams; found and fixed 13 vulnerabilities with a CVSS v4 score above 7.</li><li>Led security design reviews for 20 features a quarter, cutting critical design flaws by 30%.</li><li>Spent 300+ hours on security on-call: containment, resolution, post-mortems and follow-up controls for incidents such as platform and login abuse.</li><li>Triaged and prioritized 40+ bug bounty reports and added regression tests for the fixes.</li><li>Tracked new CVEs and attack techniques and turned them into controls and regression checks.</li></ul>
 </article>
-<article>
+<article class="level">
+<p class="level-tag"><time datetime="2020-12">Dec 2020</time> – <time datetime="2021-12">Dec 2021</time> · Remote</p>
 <h3>Mobitrail — Security Analyst</h3>
-<p class="chip"><time datetime="2020-12">Dec 2020</time> – <time datetime="2021-12">Dec 2021</time> · Remote</p>
 <ul class="list"><li>Security testing for ICICI Prudential Mutual Fund.</li><li>Reported 100+ vulnerabilities using the OWASP WSTG, work that helped the company get CERT-In empanelment and grow sales by 300%.</li><li>Wrote Python automation around SQLMap, Nmap, Nuclei and OWASP ZAP for consistent, less manual testing.</li></ul>
 </article>
-</div>
-</section>
-<section aria-labelledby="skills">
+</div></section>
+<section class="section" aria-labelledby="skills"><div class="inner">
 <h2 id="skills">Skills</h2>
-<div>
-<dl><dt>Techniques</dt><dd><ul><li>Source code review</li><li>Threat modeling</li><li>Penetration testing</li><li>Incident response</li><li>Security training</li></ul></dd><dt>Tools</dt><dd><ul><li>Burp Suite</li><li>Cloudflare</li><li>Cursor</li><li>New Relic</li><li>Wiz</li><li>Nmap</li><li>OWASP depscan</li><li>Dependabot</li><li>CodeQL</li></ul></dd><dt>Technologies</dt><dd><ul><li>Node.js</li><li>Django</li><li>AWS</li><li>Git</li><li>GitHub</li><li>SQL</li><li>Linux</li><li>Claude</li></ul></dd><dt>Languages</dt><dd><ul><li>Python</li><li>JavaScript</li><li>PHP</li><li>Java</li><li>Bash</li></ul></dd></dl>
-</div>
-</section>
-<section aria-labelledby="certs">
+<dl class="grid skills"><div class="card"><dt>Techniques</dt><dd><ul><li>Source code review</li><li>Threat modeling</li><li>Penetration testing</li><li>Incident response</li><li>Security training</li></ul></dd></div><div class="card"><dt>Tools</dt><dd><ul><li>Burp Suite</li><li>Cloudflare</li><li>Cursor</li><li>New Relic</li><li>Wiz</li><li>Nmap</li><li>OWASP depscan</li><li>Dependabot</li><li>CodeQL</li></ul></dd></div><div class="card"><dt>Technologies</dt><dd><ul><li>Node.js</li><li>Django</li><li>AWS</li><li>Git</li><li>GitHub</li><li>SQL</li><li>Linux</li><li>Claude</li></ul></dd></div><div class="card"><dt>Languages</dt><dd><ul><li>Python</li><li>JavaScript</li><li>PHP</li><li>Java</li><li>Bash</li></ul></dd></div></dl>
+</div></section>
+<section class="section" aria-labelledby="certs"><div class="inner">
 <h2 id="certs">Certifications</h2>
-<div>
-<ul class="plain"><li><time datetime="2025">2025</time> — Web Security Code Review Training, PentesterLab</li><li><time datetime="2025">2025</time> — Threat Modeling Practitioner Training, Toreon</li><li><time datetime="2024">2024</time> — eWPTv2, INE</li></ul>
-</div>
-</section>
-<section aria-labelledby="education">
+<div class="card"><ul class="list"><li><time datetime="2025">2025</time> — Web Security Code Review Training, PentesterLab</li><li><time datetime="2025">2025</time> — Threat Modeling Practitioner Training, Toreon</li><li><time datetime="2024">2024</time> — eWPTv2, INE</li></ul></div>
+</div></section>
+<section class="section" aria-labelledby="education"><div class="inner">
 <h2 id="education">Education</h2>
-<div>
-<p>BTech in CSIT (Computer Science &amp; Information Technology) — Symbiosis University, Indore<br><span class="chip"><time datetime="2017">2017</time> – <time datetime="2021">2021</time> · CGPA 8.6/10</span></p>
-</div>
-</section>
-<section aria-labelledby="outside">
+<div class="card"><p>BTech in CSIT (Computer Science &amp; Information Technology) — Symbiosis University, Indore</p><p class="level-tag"><time datetime="2017">2017</time> – <time datetime="2021">2021</time> · CGPA 8.6/10</p></div>
+</div></section>
+<section class="section" aria-labelledby="outside"><div class="inner">
 <h2 id="outside">Outside work</h2>
-<div>
-<p>Taught with Robin Hood Army (NGO). At university: football team captain and member of the Training &amp; Placement Cell.</p>
-</div>
-</section>
-</main>
-<footer class="wrap"><section aria-labelledby="contact">
+<div class="card"><p>Taught with Robin Hood Army (NGO). At university: football team captain and member of the Training &amp; Placement Cell.</p></div>
+</div></section>
+<section class="section cta" aria-labelledby="contact"><div class="inner">
 <h2 id="contact">Contact</h2>
-<ul class="btns">
-<li><span>Email:</span> <a class="bx btn" href="mailto:harshitkochar17@gmail.com">harshitkochar17@gmail.com</a></li>
-<li><span>LinkedIn:</span> <a class="bx btn" href="https://www.linkedin.com/in/harshit-kochar" rel="noopener">linkedin.com/in/harshit-kochar</a></li>
-<li><span>Blog:</span> <a class="bx btn" href="https://supply-chain-security.hashnode.dev/supply-chain-security-lab" rel="noopener">Supply chain security lab</a></li>
+<ul>
+<li><span>Email:</span> <a href="mailto:harshitkochar17@gmail.com">harshitkochar17@gmail.com</a></li>
+<li><span>LinkedIn:</span> <a href="https://www.linkedin.com/in/harshit-kochar" rel="noopener">linkedin.com/in/harshit-kochar</a></li>
+<li><span>Blog:</span> <a href="https://supply-chain-security.hashnode.dev/supply-chain-security-lab" rel="noopener">Supply chain security lab</a></li>
+<li><span>GitHub:</span> <a href="https://github.com/harshit-kochar" rel="noopener">github.com/harshit-kochar</a></li>
 </ul>
-</section></footer>
+</div></section>
+</main>
+<footer class="footer"><p>Harshit Kochar · Security Engineer</p><a href="#top">Back to top</a></footer>
 </body>
 </html>

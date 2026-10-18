@@ -4,28 +4,27 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Not found · Harshit Kochar</title>
-<meta name="theme-color" content="#FFF6E5">
-<meta name="theme-color" content="#141414" media="(prefers-color-scheme: dark)">
-<meta name="color-scheme" content="light dark">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta name="robots" content="noindex">
 <style>
-:root{--ink:#111;--bg:#FFF6E5;--card:#fff}
-@media(prefers-color-scheme:dark){:root{--ink:#F4EFE6;--bg:#141414;--card:#1E1E1E}}
+@font-face{font-family:Fraunces;src:url(/fraunces-600.woff2) format("woff2");font-weight:600;font-display:swap}
+:root{--bg:#f7f5f2;--ink:#1c1b19;--accent:#0b6e6b;--on-accent:#fff;--hover:#08504e;--c1:#d7ede8;--c2:#f7dfc6;--c-op:.5;--hero:radial-gradient(circle at top left,#f0efe9 0%,#f7f5f2 55%,#fdfcf9 100%)}
+@media(prefers-color-scheme:dark){:root{--bg:#171614;--ink:#ede9e3;--accent:#5cc2bc;--on-accent:#0f1a19;--hover:#7dd3ce;--c1:#16302e;--c2:#3a2c1e;--c-op:.4;--hero:radial-gradient(circle at top left,#1e1d1a 0%,#171614 55%,#1a1917 100%)}}
 *{box-sizing:border-box}
-body{margin:0;min-height:100vh;display:grid;place-items:center;padding:1.25rem;background:var(--bg);color:var(--ink);font:1.0625rem/1.6 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
-main{max-width:34rem;background:var(--card);border:3px solid var(--ink);border-radius:.5rem;box-shadow:6px 6px 0 var(--ink);padding:clamp(1.25rem,5vw,2.5rem)}
-h1{font-size:clamp(4rem,22vw,8rem);line-height:1;letter-spacing:-.04em;font-weight:900;margin:0}
-p{font-size:1.25rem;margin:1rem 0 1.5rem}
-a{display:inline-block;background:#FFD84D;color:#111;border:3px solid var(--ink);border-radius:.5rem;box-shadow:6px 6px 0 var(--ink);font-weight:800;text-decoration:none;padding:.7rem 1.1rem;transition:transform .1s,box-shadow .1s}
-a:hover,a:focus-visible{transform:translate(3px,3px);box-shadow:3px 3px 0 var(--ink)}
-a:focus-visible{outline:3px dashed var(--ink);outline-offset:3px}
-@media(prefers-reduced-motion:reduce){a{transition:none}a:hover,a:focus-visible{transform:none}}
+body{margin:0;font:1rem/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg)}
+.hero{position:relative;overflow:hidden;min-height:100vh;display:grid;place-content:center;justify-items:start;gap:24px;padding:36px 6vw;background:var(--hero)}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:999px;opacity:var(--c-op);pointer-events:none}
+.hero::before{width:320px;height:320px;background:var(--c1);top:-120px;left:-80px}
+.hero::after{width:260px;height:260px;background:var(--c2);bottom:-140px;right:-90px}
+.hero>*{position:relative;z-index:1;margin:0}
+h1{font:600 clamp(2.6rem,5vw,3.8rem)/1.1 Fraunces,"Iowan Old Style",Georgia,serif}
+a{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:600;background:var(--accent);color:var(--on-accent);text-decoration:none}
+a:hover{background:var(--hover)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 </style>
 </head>
 <body>
-<main>
-<h1>404</h1>
+<main class="hero">
+<h1>Page not found</h1>
 <p>That page does not exist.</p>
 <a href="/">Back to the home page</a>
 </main>
