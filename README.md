@@ -1,6 +1,6 @@
 # prorajnikant.github.io
 
-Personal site for Harshit Kochar. Plain HTML and CSS: no build step, no JavaScript, no dependencies.
+Personal site for Harshit Kochar. Plain HTML and CSS: no build step, no dependencies. The only JavaScript is one line that keeps the "years in security" figure current; without JS the page shows the value written into the HTML.
 
 - `index.html`: the whole site (the CSS is inline)
 - `404.html`: the not-found page GitHub Pages serves
