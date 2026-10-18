@@ -7,8 +7,6 @@
 <meta name="theme-color" content="#f7f5f2">
 <meta name="theme-color" content="#171614" media="(prefers-color-scheme: dark)">
 <meta name="color-scheme" content="light dark">
-<link rel="preload" href="fraunces-700.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="plex-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="description" content="Harshit Kochar is a security engineer at Postman in Bangalore, working on supply chain security, AI coding-agent security, detection engineering and incident response.">
 <link rel="canonical" href="https://prorajnikant.github.io/">
@@ -45,8 +43,8 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:.75rem;color:var(--muted);margin:0}
 h1,h2{font-family:var(--serif);font-weight:700;margin:0}
 h1{font-size:clamp(2.6rem,5vw,3.8rem);line-height:1.1}
-h2{font-size:clamp(2rem,3vw,2.6rem);margin-bottom:20px}
-h3{margin:0 0 10px;font-size:1.15rem}
+h2{font-size:clamp(1.9rem,3vw,2.4rem);line-height:1.15;margin-bottom:24px}
+h3{margin:0 0 8px;font-size:1.15rem;line-height:1.35}
 ul,dl,dd{margin:0;padding:0;list-style:none}
 .hero-sub{max-width:680px;font-size:1.1rem;color:var(--muted);margin:0}
 .hero-actions{display:flex;flex-wrap:wrap;gap:16px}
@@ -61,7 +59,8 @@ ul,dl,dd{margin:0;padding:0;list-style:none}
 .lead{font-size:1.05rem;color:var(--muted)}
 .lead p{margin:0 0 1em}
 .soft-card{background:var(--soft);border-radius:var(--r);padding:24px}
-.section{padding:80px 6vw}
+.section{padding:56px 6vw}
+.section+.section:not(.cta){padding-top:8px}
 .inner{max-width:1100px;margin:0 auto}
 .list{display:grid;gap:12px}
 .list li{padding-left:20px;position:relative}
@@ -75,9 +74,28 @@ ul,dl,dd{margin:0;padding:0;list-style:none}
 .card .level-tag{margin:12px 0 0}
 .text a{color:var(--accent);text-decoration:underline;text-underline-offset:.2em}
 .text a:hover{color:var(--accent-hover)}
-.skills dt{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:12px}
-.skills ul{display:flex;flex-wrap:wrap;gap:8px}
-.skills li{background:var(--soft);border-radius:999px;padding:2px 12px;font-size:.9rem}
+.hl{display:flex;flex-direction:column;gap:10px}
+.hl h3{margin:0}
+.hl .level-tag{margin:0;color:var(--accent)}
+.hl p{color:var(--muted);margin:0}
+.hl .more{margin-top:auto;display:grid;gap:4px}
+.more a{color:var(--accent);font-weight:600;text-decoration:underline;text-underline-offset:.2em}
+.job{display:grid;gap:8px 40px}
+@media(min-width:900px){.job{grid-template-columns:230px minmax(0,1fr)}}
+.job h3{margin:0}
+.job .org{margin:0;color:var(--muted)}
+.job .points{display:grid;gap:14px;max-width:68ch}
+.job .points li{padding-left:20px;position:relative}
+.job .points li::before{content:"•";position:absolute;left:0;color:var(--accent);font-weight:700}
+.job .points strong{display:block}
+.job .points span{color:var(--muted)}
+.skill-rows{display:grid;gap:0}
+.skill-rows div{display:grid;gap:4px 32px;padding:16px 0;border-top:1px solid var(--line)}
+.skill-rows div:first-child{border-top:0;padding-top:0}
+.skill-rows div:last-child{padding-bottom:0}
+@media(min-width:720px){.skill-rows div{grid-template-columns:160px minmax(0,1fr)}}
+.skill-rows dt{font-weight:600}
+.skill-rows dd{color:var(--muted)}
 .cta{background:var(--cta);color:#fff;text-align:center}
 @media(prefers-color-scheme:dark){.cta{color:var(--ink)}}
 .socials{display:flex;flex-wrap:wrap;justify-content:center;gap:16px 24px}
@@ -125,32 +143,25 @@ a[href^=http]::after{content:" (" attr(href) ")"}
 <section class="section" aria-labelledby="highlights"><div class="inner">
 <h2 id="highlights">Highlights</h2>
 <ul class="grid">
-<li class="card text"><strong>Incident commander for Shai-Hulud.</strong> Led Postman’s response to the Shai-Hulud 2.0 npm supply chain worm. <a href="https://blog.postman.com/engineering/root-cause-analysis-shai-halud-2-0/" rel="noopener">Read the root cause analysis</a>.</li>
-<li class="card text"><strong>Hackathon winner.</strong> Won People’s Choice and the Exploratory Innovation award at the Postman hackathon for a Rust-based client-side secret scanner that detects 120+ secret patterns for Postman entities.</li>
-<li class="card text"><strong>Talks.</strong> <a href="https://youtu.be/q4chiSPo4GA?t=380" rel="noopener">Automating API security</a>; <a href="https://www.youtube.com/watch?v=hXsnb7HxzhY" rel="noopener">Snyk’s AI Security Radar</a>.</li>
+<li class="card hl"><p class="level-tag">Incident response</p><h3>Incident commander for Shai-Hulud</h3><p>Led Postman’s response to the Shai-Hulud 2.0 npm supply chain worm.</p><div class="more"><a href="https://blog.postman.com/engineering/root-cause-analysis-shai-halud-2-0/" rel="noopener">Read the root cause analysis</a></div></li>
+<li class="card hl"><p class="level-tag">Hackathon</p><h3>People’s Choice and Exploratory Innovation awards</h3><p>Postman hackathon win for a Rust-based client-side secret scanner that detects 120+ secret patterns for Postman entities.</p></li>
+<li class="card hl"><p class="level-tag">Talks</p><h3>Speaking on API and AI security</h3><p>Two recorded talks:</p><div class="more"><a href="https://youtu.be/q4chiSPo4GA?t=380" rel="noopener">Automating API security</a><a href="https://www.youtube.com/watch?v=hXsnb7HxzhY" rel="noopener">Snyk’s AI Security Radar</a></div></li>
 </ul>
 </div></section>
 <section class="section" aria-labelledby="experience"><div class="inner">
 <h2 id="experience">Experience</h2>
-<article class="level">
-<p class="level-tag"><time datetime="2023-04">Apr 2023</time> – present · Bangalore</p>
-<h3>Postman — Security Engineer II</h3>
-<ul class="list"><li>Moved all npm publishing to GitHub Actions with OIDC, removing every npm write token and manual publish.</li><li>Built a fleet-wide Claude skill that generates repo-specific secure coding standards, and rolled out a baseline CLAUDE.md to developer machines to rein in unreviewed “vibe-coding”.</li><li>Wrote Claude hooks that strip malicious CLAUDE.md files from untrusted repos, and a GitHub Enterprise-wide app that blocks AI accounts from approving pull requests.</li><li>Enforced a 72-hour minimum release age for npm packages, plus a custom proxy that applies the same rule to IDE extensions, across developer machines and CI/CD.</li><li>Shipped Jamf profiles for Cursor, Claude Code and Claude Desktop that enforce team logins and security settings, require permission before reading sensitive files, and disable project-level MCP servers.</li><li>Maintain Postman’s core security library, which enforces secure redirects, CORS, CSP and content-type validation across every production service.</li><li>Wrote high-fidelity detections in Scanner.dev (SIEM) for GitHub, Okta and anomalous Postman API key use.</li></ul>
-</article>
-<article class="level">
-<p class="level-tag"><time datetime="2022-01">Jan 2022</time> – <time datetime="2023-04">Apr 2023</time> · Bangalore</p>
-<h3>Postman — Security Engineer</h3>
-<ul class="list"><li>Pentested 120+ releases, 50+ of them major, across IAM, Billing, API Network, Search and other teams; found and fixed 13 vulnerabilities with a CVSS v4 score above 7.</li><li>Led security design reviews for 20 features a quarter, cutting critical design flaws by 30%.</li><li>Spent 300+ hours on security on-call: containment, resolution, post-mortems and follow-up controls for incidents such as platform and login abuse.</li><li>Triaged and prioritized 40+ bug bounty reports and added regression tests for the fixes.</li><li>Tracked new CVEs and attack techniques and turned them into controls and regression checks.</li></ul>
-</article>
-<article class="level">
-<p class="level-tag"><time datetime="2020-12">Dec 2020</time> – <time datetime="2021-12">Dec 2021</time> · Remote</p>
-<h3>Mobitrail — Security Analyst</h3>
-<ul class="list"><li>Security testing for ICICI Prudential Mutual Fund.</li><li>Reported 100+ vulnerabilities using the OWASP WSTG, work that helped the company get CERT-In empanelment and grow sales by 300%.</li><li>Wrote Python automation around SQLMap, Nmap, Nuclei and OWASP ZAP for consistent, less manual testing.</li></ul>
-</article>
+<article class="level job"><div><p class="level-tag"><time datetime="2023-04">Apr 2023</time> – present</p><h3>Security Engineer II</h3><p class="org">Postman · Bangalore</p></div><ul class="points"><li><strong>Tokenless npm releases</strong><span>All npm publishing moved to GitHub Actions with OIDC. No write tokens, no manual publishes.</span></li><li><strong>Package age gate</strong><span>npm packages and IDE extensions must be at least 72 hours old before install, on developer machines and in CI/CD.</span></li><li><strong>Guardrails for AI coding agents</strong><span>A fleet-wide Claude skill for repo-specific secure coding standards, hooks that strip malicious CLAUDE.md files, Jamf profiles for Cursor and Claude, and a GitHub app that stops AI accounts approving pull requests.</span></li><li><strong>Detection engineering</strong><span>High-fidelity alerts in Scanner.dev (SIEM) for GitHub, Okta and anomalous Postman API key use.</span></li><li><strong>Security library</strong><span>Maintain Postman’s core library for secure redirects, CORS, CSP and content-type validation across every production service.</span></li></ul></article>
+<article class="level job"><div><p class="level-tag"><time datetime="2022-01">Jan 2022</time> – <time datetime="2023-04">Apr 2023</time></p><h3>Security Engineer</h3><p class="org">Postman · Bangalore</p></div><ul class="points"><li><strong>Penetration testing</strong><span>120+ releases (50+ major) across IAM, Billing, API Network and Search. Found and fixed 13 vulnerabilities with a CVSS v4 score above 7.</span></li><li><strong>Security design reviews</strong><span>20 features a quarter, cutting critical design flaws by 30%.</span></li><li><strong>Incident response</strong><span>300+ hours on call: containment, post-mortems and follow-up controls for platform and login abuse.</span></li><li><strong>Bug bounty triage</strong><span>40+ reports triaged and prioritized, with regression tests for the fixes.</span></li></ul></article>
+<article class="level job"><div><p class="level-tag"><time datetime="2020-12">Dec 2020</time> – <time datetime="2021-12">Dec 2021</time></p><h3>Security Analyst</h3><p class="org">Mobitrail · Remote</p></div><ul class="points"><li><strong>Client testing</strong><span>Security testing for ICICI Prudential Mutual Fund.</span></li><li><strong>CERT-In empanelment</strong><span>Reported 100+ vulnerabilities using the OWASP WSTG, helping the company get empanelled and grow sales by 300%.</span></li><li><strong>Automation</strong><span>Python scripts around SQLMap, Nmap, Nuclei and OWASP ZAP for consistent, less manual testing.</span></li></ul></article>
 </div></section>
 <section class="section" aria-labelledby="skills"><div class="inner">
 <h2 id="skills">Skills</h2>
-<dl class="grid skills"><div class="card"><dt>Techniques</dt><dd><ul><li>Source code review</li><li>Threat modeling</li><li>Penetration testing</li><li>Incident response</li><li>Security training</li></ul></dd></div><div class="card"><dt>Tools</dt><dd><ul><li>Burp Suite</li><li>Cloudflare</li><li>Cursor</li><li>New Relic</li><li>Wiz</li><li>Nmap</li><li>OWASP depscan</li><li>Dependabot</li><li>CodeQL</li></ul></dd></div><div class="card"><dt>Technologies</dt><dd><ul><li>Node.js</li><li>Django</li><li>AWS</li><li>Git</li><li>GitHub</li><li>SQL</li><li>Linux</li><li>Claude</li></ul></dd></div><div class="card"><dt>Languages</dt><dd><ul><li>Python</li><li>JavaScript</li><li>PHP</li><li>Java</li><li>Bash</li></ul></dd></div></dl>
+<dl class="card skill-rows">
+<div><dt>Techniques</dt><dd>Source code review · Threat modeling · Penetration testing · Incident response · Security training</dd></div>
+<div><dt>Tools</dt><dd>Burp Suite · Cloudflare · Cursor · New Relic · Wiz · Nmap · OWASP depscan · Dependabot · CodeQL</dd></div>
+<div><dt>Technologies</dt><dd>Node.js · Django · AWS · Git · GitHub · SQL · Linux · Claude</dd></div>
+<div><dt>Languages</dt><dd>Python · JavaScript · PHP · Java · Bash</dd></div>
+</dl>
 </div></section>
 <section class="section" aria-labelledby="background"><div class="inner">
 <h2 id="background">Background</h2>
